@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap\css\bootstrap.css">
+<script type="text/javascript" src="bootstrap\jquery.js"></script>
+<script type="text/javascript" src="bootstrap\js\bootstrap.js"></script>
+  <style>
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+    }
+
+    body{
+      background-image: url('5.jpeg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+<body  ><br>
+  
+ 
+
+      <center><h1 style="color:black;">(CACULATE ME!)</h1></center>
+   <center><div class="container"style="border: double;width: 250px; margin-left: 1px; height: 370px;border-radius: 20px;background: gray;font-size:px;"> 
+   
+<div >
+<h2 style="margin-top: 20px;">CANON</h2>
+  <input style="width:190px;background:darkgray ;border-color: black;color: black;border: ;" type="text" id="display" disabled>
+</div>
+<div >
+  <button style="width:50px;height: 50px;background: orange;color: black;" onclick="clearDisplay()">Clear</button>
+  <button style="width:50px;height:50px;color:black;background: orange;" onclick="appendToDisplay('.')">.</button>
+  <button style="width:50px;height:50px;color:black;background: orange;" onclick="calculate()">=</button>
+  <button style="width:50px;height:50px;color:black;background: orange;" onclick="appendToDisplay('/')">/</button>
+  
+</div>
+<div >
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('7')">7</button>
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('8')">8</button>
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('9')">9</button>
+  <button style="width:50px;height:50px;color:black;background: orange;" onclick="appendToDisplay('*')">*</button>
+  
+</div>
+<div >
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('4')">4</button>
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('5')">5</button>
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('6')">6</button>
+  <button style="width:50px;height:50px;color:black;background: orange;" onclick="appendToDisplay('-')">-</button>
+  
+</div>
+<div >
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('1')">1</button>
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('2')">2</button>
+  <button style="width:50px;height: 50px;background: black;color: white;" onclick="appendToDisplay('3')">3</button>
+
+  <button style="width:50px;height:50px;color:black;background: orange;" onclick="appendToDisplay('+')">+</button>
+  
+</div>
+<div>
+  <button style="width:212px;height: 50px;background: black;color: white;" onclick="appendToDisplay('0')">0</button>
+ 
+</div>
+</div></center>
+
+<script>
+  function appendToDisplay(value) {
+    document.getElementById('display').value += value;
+  }
+
+  function calculate() {
+    var display = document.getElementById('display');
+    display.value = eval(display.value);
+  }
+  function clearDisplay() {
+    document.getElementById('display').value = '';
+  }
+</script>
+
+</body>
+</html>
